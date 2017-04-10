@@ -13,8 +13,6 @@ var glbPath = 'specs/data/box-textured/box-textured.glb';
 var objPathInvalid = 'invalid/';
 var gltfPathInvalid = 'invalid/model.invalid';
 var objPathNonExistent = 'specs/data/non-existent.obj';
-var gltfPathNonExistent = 'specs/data/non-existent.gltf';
-
 var objExternalResourcesPath = 'specs/data/box-external-resources/box-external-resources.obj';
 
 describe('convert', function() {
@@ -69,11 +67,14 @@ describe('convert', function() {
             separateTextures : true,
             compress : true,
             optimize : true,
+            optimizeForCesium : true,
             generateNormals : true,
             ao : true,
             kmc : true,
-            optimizeForCesium : true,
-            textureCompressionOptions : textureCompressionOptions
+            textureCompressionOptions : textureCompressionOptions,
+            hasTransparency : true,
+            secure : true,
+            logger : convert.defaults.logger
         };
 
         expect(convert(objPath, gltfPath, options)

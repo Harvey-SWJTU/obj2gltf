@@ -1,6 +1,6 @@
 'use strict';
 var path = require('path');
-var loadMtl = require('../../lib/mtl.js');
+var loadMtl = require('../../lib/mtl');
 
 var complexMaterialUrl = 'specs/data/box-complex-material/box-complex-material.mtl';
 var multipleMaterialsUrl = 'specs/data/box-multiple-materials/box-multiple-materials.mtl';

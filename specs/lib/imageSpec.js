@@ -1,7 +1,7 @@
 'use strict';
 var Cesium = require('cesium');
 var path = require('path');
-var loadImage = require('../../lib/image.js');
+var loadImage = require('../../lib/image');
 
 var WebGLConstants = Cesium.WebGLConstants;
 
